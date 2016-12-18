@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/movie/movie",
+    "pages/tuijian/tuijian",
+    "pages/search/search",
+    "pages/jijiang/jijiang",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "color":"#eee",
+    "selectedColor":"#DD5E0E",
+    "borderStyle":"black",
+    "backgroundColor":"#2B2B2B",
+    "list": [{
+      "pagePath": "pages/movie/movie",
+      "iconPath":"pages/assites/img/dy-1.png",
+      "selectedIconPath":"pages/assites/img/dy.png",
+      "text": "影院热映"
+    }, {
+      "pagePath": "pages/tuijian/tuijian",
+      "iconPath":"pages/assites/img/tj-1.png",
+      "selectedIconPath":"pages/assites/img/tj.png",
+      "text": "电影推荐"
+    }, {
+      "pagePath": "pages/jijiang/jijiang",
+      "iconPath":"pages/assites/img/jijiang-1.png",
+      "selectedIconPath":"pages/assites/img/jijiang.png",
+      "text": "即将上映"
+    }, {
+      "pagePath": "pages/search/search",
+      "iconPath":"pages/assites/img/search-1.png",
+      "selectedIconPath":"pages/assites/img/search.png",      
+      "text": "搜索电影"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2B2B2B",
+    "navigationBarTitleText": "普华电影APP",
+    "navigationBarTextStyle":"#fff"
+  }
+}

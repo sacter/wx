@@ -1,0 +1,35 @@
+page{
+    background:#3A3A3A; 
+    font-family:微软雅黑,宋体;
+    height:100%;
+}
+.content{
+    height:100%;
+}
+.movie{
+    display:flex;
+    flex-direction:row;
+}
+.pic image{
+    width:100px;
+    height:150px;
+    padding-top:6px;
+    margin-left:10px;
+}
+.movie-info{
+    margin-left:20px;
+}
+.base-info{
+    color:#fff;
+    font-size:0.8rem;
+    padding-top:12px;
+    line-height:20px;
+}
+.hr{
+    height:2px;
+    width:100%;
+    background-color:black;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    opacity:0.2;
+}

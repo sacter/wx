@@ -1,0 +1,67 @@
+Page({
+  data:{
+      movie:{}
+  },
+  onLoad:function(options){
+    // 页面初始化 options为页面跳转所带来的参数
+    this.loadMovie(options.id);
+  },
+  onReady:function(){
+    // 页面渲染完成
+  },
+  onShow:function(){
+    // 页面显示
+  },
+  onHide:function(){
+    // 页面隐藏
+  },
+  onUnload:function(){
+    // 页面关闭
+  },
+  processSubject:function(subject){
+      var title=subject.title;  //名字
+      var year=subject.year; //发行年份
+      var rating=subject.rating.average //豆瓣评分
+      var directors=subject.directors;  //导演
+      var directorStr="";
+      for(var j in directors){
+          directorStr=directorStr+directors[j].name+" /";
+      }
+      if(directorStr!=""){
+          directorStr=directorStr.substring(0,directorStr.length-2); //directorStr.length要-2是应为前面加了一个空格和/
+      }
+      var casts=subject.casts;  //演员
+      var castStr="";
+      for(var j in casts){
+          castStr=castStr+casts[j].name+" /";
+      }
+      if(castStr!=""){
+          castStr=castStr.substring(0,castStr.length-2);
+      }
+      var genres=subject.genres;  //类型
+      var genreStr="";
+      for(var j in genres){
+          genreStr=genreStr+genres[j]+" /";
+      }
+      if(genreStr!=""){
+          genreStr=genreStr.substring(0,genreStr.length-2);
+      }
+      var text="名称："+title+"\n导演："+directorStr+"\n主演："+castStr+"\n类型："+genreStr+"\n上映年份："+year+"(中国大陆)"+"\n豆瓣评分："+rating;
+      subject.text=text;
+  },
+  loadMovie:function(movieId){
+      var page=this;
+      //var movieId= wx.getStorageSync('movieId')
+      wx.request({ 
+          url: 'https://api.douban.com/v2/movie/subject/'+movieId,  //豆瓣热映电影的API
+        header: {
+          "Content-Type":"json"
+        },
+        success: function(res) {           
+           var subject=res.data;
+           page.processSubject(subject);
+           page.setData({movie:subject});
+        }
+      })
+   }
+})

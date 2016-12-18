@@ -1,0 +1,19 @@
+<view class="content">
+     <view class="big">
+          <image src="{{movie.images.large}}" mode="aspectFit"></image>
+      </view>
+      <view class="hr"></view>
+      <view class="detail">
+           <text>{{movie.text}}</text>
+      </view>
+      <button type="primary" size="mini" loading="{{waite}}" disabled="{{disabled}}" bindtap="look" class="yingP">查看影评</button>
+      <view class="casts">
+         <block wx:for="{{movie.casts}}">
+             <image src="{{item.avatars.medium}}" mode="aspectFit"></image>
+         </block>
+      </view>
+      <view class="hr"></view>
+      <view class="detail">
+           <text>{{movie.summary}}</text>
+      </view>
+</view>

@@ -1,0 +1,44 @@
+/* pages/cal/cal.wxss */
+.content{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-sizing:border-box;
+    background:#636D7B;
+    padding-top:30rpx;
+    padding-bottom:80rpx;
+}
+.screen{
+    background:#fff;
+    border-radius:3px;
+    text-align:right;
+    width:720rpx;
+    height:100rpx;
+    line-height:100rpx;
+    padding-right:10rpx;
+    margin-bottom:30rpx;
+}
+.btnGroup{
+    display:flex;
+    flex-direction:row;
+}
+.item{
+    width:160rpx;
+    min-height:150rpx;
+    margin:10rpx;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+    border-radius:5px;
+    text-align:center;
+    line-height:150rpx;
+}
+.orange{
+    color:#fef4e9;
+    background:#f78d1d;
+    border:1px solid #da7c0c;
+}
+.blue{
+    color:#d9eef7;
+    background:#0095cd;
+    border:1px solid #0076a3;
+}
